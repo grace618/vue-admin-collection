@@ -1,0 +1,21 @@
+export default{
+    route:{
+        'home':'首页',
+        'component':'组件',
+        'permission':'权限',
+        'i18n':'语言切换',
+        'drag':'拖拽',
+        'permission-instruction':'权限指令',
+        'permission-page':'权限页面',
+        'list-drag':'列表拖拽',
+        'list-panel':'拖拽面板',
+        'menu-1':'菜单一',
+        'menu-2':'菜单二',
+        'menu-1-1':'菜单1-1',
+        'menu-1-2':'菜单1-2',
+        'Nested':'路由嵌套'
+    },
+    login:{
+     'title':'后台登录'
+    }
+}

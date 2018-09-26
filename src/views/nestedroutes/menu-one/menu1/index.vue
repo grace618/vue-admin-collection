@@ -1,0 +1,127 @@
+<template>
+       <recursive  :list='trees'></recursive>
+</template>
+<script>
+import recursive from './recursive'
+export default {
+    components: {
+        recursive
+    },
+    data(){
+        return {
+            trees: [
+                    {
+                        id:1,
+                        label:"1级目录1",
+                        show:true,
+                        children:[
+                            {
+                                id:"1-1",
+                                label:"1.1目录"
+                            },
+                            {
+                                id:"1-2",
+                                label:"1.2目录"
+                            },
+                            {
+                                id:"1-3",
+                                label:"1.3目录"
+                            },
+                        ]
+                    },
+                    {
+                        id:2,
+                        label:"1级目录2",
+                        show:true
+                    },
+                    {
+                        id:3,
+                        label:"1级目录3",
+                        show:true,
+                        children:[
+                            {
+                                id:"3-1",
+                                label:"3.1目录"
+                            },
+                            {
+                                id:"3-2",
+                                label:"3.2目录",
+                                show:false,
+                                children:[
+                                    {
+                                        id:"3-2-1",
+                                        label:"3.2.1目录"
+                                    },
+                                    {
+                                        id:"3-2-2",
+                                        label:"3.2.2目录"
+                                    },
+                                    {
+                                        id:"3-2-3",
+                                        label:"3.2.3目录"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        id:4,
+                        label:"1级目录4",
+                        show:true,
+                        children:[
+                            {
+                                id:"4-1",
+                                label:"4.1目录"
+                            },
+                            {
+                                id:"4-2",
+                                label:"4.2目录",
+                                show:true,
+                                children:[
+                                    {
+                                        id:"4-2-1",
+                                        label:"4.2.1目录"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        id:5,
+                        label:"1级目录5",
+                        show:true,
+                        children:[
+                            {
+                                id:"5-1",
+                                label:"5.1目录",
+                                show:true,
+                                children:[
+                                    {
+                                        id:"5-1-1",
+                                        label:"5.1.1目录"
+                                    },
+                                    {
+                                        id:"5-1-2",
+                                        label:"5.1.2目录",
+                                        show:true,
+                                        children:[
+                                            {
+                                                id:"5-1-2-1",
+                                                label:"5.1.2.1目录"
+                                            },
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                id:"5-2",
+                                label:"5.2目录",
+                                show:false
+                            }
+                        ]
+                    },
+                ]
+        }
+    }
+}
+</script>

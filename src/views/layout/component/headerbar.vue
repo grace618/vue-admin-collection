@@ -5,8 +5,11 @@
             </svg-icon>
         </div> 
        <el-breadcrumb separator="/" class="breadcrumb" >
-            <el-breadcrumb-item  :to="{path:'/'}" v-for='item in routes' :key='item.path'>
-                {{item.meta.title}}
+            <el-breadcrumb-item  :to="{path:'/'}" v-if='routes.length>1' v-for='item in routes' :key='item.path'>
+                {{generateTitle(item.meta.title)}}
+            </el-breadcrumb-item>
+            <el-breadcrumb-item  :to="{path:'/'}" v-else :key='routes[0].path'>
+                {{routes[0].meta.icon}}
             </el-breadcrumb-item>
         </el-breadcrumb>
         <!-- {{routes}} -->
@@ -29,6 +32,7 @@
 
 <script>
  import {mapGetters} from 'vuex'
+ import {generateTitle} from '@/utils/i18n.js'
 export default {
   name: "headerbar",
   data() {
@@ -60,7 +64,8 @@ export default {
       this.$store.dispatch('logout').then(()=>{
         location.reload()
       })
-    }
+    },
+    generateTitle
   }
 };
 </script>

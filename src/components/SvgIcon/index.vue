@@ -8,7 +8,7 @@ export default {
     name:'svg-icon',
     props:{
         iconClass:{  
-            type:String,
+            type:[String,Object],
             required:true
         },
         className:{
@@ -16,10 +16,10 @@ export default {
         }
     },
     computed:{
-        iconName(){  //类名
+        iconName(){  //
             return `#icon-${this.iconClass}`
         },
-        svgClass(){  //样式
+        svgClass(){  //
             if(this.className){
                 return 'svg-icon '+this.className
             }else{

@@ -1,5 +1,5 @@
 <template>
-    <div>this is page</div>
+    <div>这是admin</div>
 </template>
 <script>
 export default {

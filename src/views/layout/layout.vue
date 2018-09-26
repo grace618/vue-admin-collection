@@ -30,6 +30,6 @@ export default {
     margin-left: 180px;
 }
 .main-container-l{
-    margin-left: 56px;
+    margin-left: 64px;
 }
 </style>

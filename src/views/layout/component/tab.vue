@@ -1,6 +1,7 @@
 <template>
     <div>
-        人生如此艰难吗
+        <!-- 人生如此艰难吗 -->
+        hello world
     </div>
 </template>
 <script>
